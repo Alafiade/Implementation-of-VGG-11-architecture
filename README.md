@@ -13,7 +13,7 @@ Implementing VGG 11 like architecture on CIFAR 10 dataset
  
  I experienced experienced slow training due to VGG'S large parameters count and due to the architecture originally  designed for ImageNet dataset instead of CIFAR 10 datasets.
 
-To help curb this problem reducig the two Fully connected layers dimensionality would reduce the total parameter count of the architecture and might reduce training cost
+To help curb this problem in future experiment reducing the two Fully connected layers dimensionality would reduce the total parameter count of the architecture and might reduce training cost
  
  
 

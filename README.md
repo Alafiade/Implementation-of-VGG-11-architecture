@@ -13,7 +13,10 @@ Implementing VGG 11 like architecture on CIFAR 10 dataset
  
  I experienced experienced slow training due to VGG'S large parameters count and due to the architecture originally  designed for ImageNet dataset instead of CIFAR 10 datasets.
 
-To help curb this problem in future experiment reducing the two Fully connected layers dimensionality would reduce the total parameter count of the architecture and might reduce training cost
+To address this problem, i removed one of the two fully connected layers from the original VGG architecture and reduced the dimensions from 4096 to 1096, which reduced the parameter count down to 9.7 million, however the model still trained slowly on the dataset. This slowness  could be caused from the large number of convolutional layers and the VGG architecture being built for ImageNet data instead of CIFAR-10. The CIFAR-10's small dataset image size of 3x32 combined with the VGG's 5 pooling layers causes excessive downsampling which reduces reduces the spatial  dimensions so that the convolutional layers can't earn spatial information from the data.
+
+# Conclusion
+These experiments demonstrated that VGG's architecture isn't suit for CIFAR-10 dataset and woud require major architectural changes beyonfd reducing the parameter count.
  
  
 
